@@ -1,4 +1,4 @@
-# 🤖 Asistente Inteligente de Extranjería para Autorizaciones de Residencia y Trabajo mediante Gemini, RAG y LangGraph
+# Asistente Inteligente de Extranjería para Autorizaciones de Residencia y Trabajo mediante Gemini, RAG y LangGraph
 
 ![Python](https://img.shields.io/badge/Python-3.11-blue)
 ![LangChain](https://img.shields.io/badge/LangChain-RAG-green)
@@ -9,7 +9,7 @@
 
 ---
 
-# 1. 📌 Descripción del proyecto
+# 1. Descripción del proyecto
 
 Este proyecto desarrolla un **asistente conversacional especializado en procedimientos de extranjería para Autorizaciones de Residencia y Trabajo en España**, capaz de responder preguntas utilizando exclusivamente la información contenida en documentación oficial.
 
@@ -32,7 +32,7 @@ El asistente cuenta con una **interfaz web construida con Streamlit** que va má
 
 ---
 
-# 2. 🎯 Objetivos
+# 2. Objetivos
 
 El proyecto persigue los siguientes objetivos:
 
@@ -57,7 +57,7 @@ Este enfoque reduce las alucinaciones del modelo y mejora la confianza en las re
 
 ---
 
-# 3. 📂 Base documental
+# 3. Base documental
 
 El conocimiento del asistente proviene exclusivamente de documentación oficial del Gobierno de España.
 
@@ -75,7 +75,7 @@ Estos documentos son indexados para construir la base vectorial utilizada durant
 
 ---
 
-# 4. 💬 Casos de uso
+# 4. Casos de uso
 
 El asistente puede responder preguntas como:
 
@@ -92,14 +92,14 @@ Todas las respuestas se generan exclusivamente a partir de la documentación ind
 
 ---
 
-# 5. 💻 Interfaz Streamlit
+# 5. Interfaz Streamlit
 
 Además del notebook, el proyecto incluye una **aplicación web (`app.py`)** construida con Streamlit que expone el asistente como un chat completo, pensado para que la experiencia no se quede en una caja de texto simple:
 
-* **💬 Respuesta en streaming** — las respuestas del modelo se escriben token a token en tiempo real, con el efecto de "máquina de escribir" habitual en los asistentes conversacionales modernos.
-* **📎 Adjuntar documentos** — el usuario puede subir un PDF, Word o TXT propio (por ejemplo, una carta de la Oficina de Extranjería) para que el asistente lo tenga en cuenta al responder. Este documento **se usa únicamente como contexto de esa conversación** y en ningún caso se indexa en la base vectorial oficial; el asistente siempre distingue en su respuesta si la información procede de la documentación oficial o del documento adjuntado por el usuario.
-* **🎙️ Preguntas por voz** — es posible formular la pregunta hablando, ya sea grabando el audio en directo desde el micrófono del navegador o subiendo un archivo de audio ya grabado (wav, mp3, m4a, ogg). El audio se transcribe automáticamente a texto con Gemini antes de pasar por el flujo de RAG.
-* **🧵 Memoria por conversación** — cada sesión del navegador mantiene su propio `thread_id`, gestionado por el checkpointer de LangGraph, y puede reiniciarse en cualquier momento con el botón "Nueva conversación".
+* ** Respuesta en streaming** — las respuestas del modelo se escriben token a token en tiempo real, con el efecto de "máquina de escribir" habitual en los asistentes conversacionales modernos.
+* ** Adjuntar documentos** — el usuario puede subir un PDF, Word o TXT propio (por ejemplo, una carta de la Oficina de Extranjería) para que el asistente lo tenga en cuenta al responder. Este documento **se usa únicamente como contexto de esa conversación** y en ningún caso se indexa en la base vectorial oficial; el asistente siempre distingue en su respuesta si la información procede de la documentación oficial o del documento adjuntado por el usuario.
+* ** Preguntas por voz** — es posible formular la pregunta hablando, ya sea grabando el audio en directo desde el micrófono del navegador o subiendo un archivo de audio ya grabado (wav, mp3, m4a, ogg). El audio se transcribe automáticamente a texto con Gemini antes de pasar por el flujo de RAG.
+* ** Memoria por conversación** — cada sesión del navegador mantiene su propio `thread_id`, gestionado por el checkpointer de LangGraph, y puede reiniciarse en cualquier momento con el botón "Nueva conversación".
 
 Ejecución:
 
@@ -109,7 +109,7 @@ streamlit run app.py
 
 ---
 
-# 6. 🏗️ Arquitectura del sistema
+# 6. Arquitectura del sistema
 
 El flujo general del sistema es el siguiente:
 
@@ -142,7 +142,7 @@ B --> H[Memoria conversacional]
 
 ---
 
-# 7. 📄 Procesamiento de documentos
+# 7. Procesamiento de documentos
 
 Para preparar la información utilizada por el asistente se realiza el siguiente pipeline:
 
@@ -157,7 +157,7 @@ Este proceso permite recuperar únicamente los fragmentos relevantes para cada c
 
 ---
 
-# 8. 🧠 Generación de respuestas (RAG)
+# 8. Generación de respuestas (RAG)
 
 Cuando el usuario realiza una consulta:
 
@@ -169,7 +169,7 @@ Cuando el usuario realiza una consulta:
 
 Este enfoque mejora significativamente la precisión respecto a un modelo generativo sin recuperación de información.
 
-## 💬 Ejemplo:
+## Ejemplo:
 
 **Usuario**
 
@@ -181,7 +181,7 @@ El plazo de resolución de la solicitud es de tres meses, contados a partir del 
 
 ---
 
-# 9. 💾 Memoria conversacional
+# 9. Memoria conversacional
 
 El asistente utiliza memoria mediante LangGraph para:
 
@@ -194,7 +194,7 @@ De esta forma el usuario no necesita repetir continuamente la información ya pr
 
 ---
 
-# 10. 🚀 Resultados
+# 10. Resultados
 
 El proyecto demuestra la integración de las principales tecnologías actuales para el desarrollo de asistentes inteligentes:
 
@@ -211,7 +211,7 @@ El resultado es un asistente capaz de proporcionar respuestas contextualizadas, 
 
 ---
 
-# 11. 📈 Posibles mejoras
+# 11. Posibles mejoras
 
 Algunas líneas futuras de desarrollo incluyen:
 
@@ -226,7 +226,7 @@ Algunas líneas futuras de desarrollo incluyen:
 
 ---
 
-# 📁 Estructura del proyecto
+# Estructura del proyecto
 
 ```
 Proyecto_Extranjeria_RAG/
@@ -261,7 +261,7 @@ Proyecto_Extranjeria_RAG/
 
 ---
 
-# 🛠️ Tecnologías
+# Tecnologías
 
 | Layer        | Technology        |
 | ------------ | ----------------- |
@@ -364,12 +364,12 @@ Ejecutar las celdas en orden.
 
 ---
 
-# ⭐ Key Takeaway
+# Key Takeaway
 
 Los modelos de lenguaje alcanzan su máximo potencial cuando se combinan con sistemas de recuperación de información. Mediante una arquitectura RAG basada en documentación oficial, es posible construir asistentes especializados que proporcionen respuestas precisas, contextualizadas y significativamente más fiables que un LLM utilizado de forma aislada.
 
 ---
 
-# 👨‍💻 Autor
+# Autor
 
 Proyecto desarrollado como caso práctico de **Large Language Models (LLM)**, **Retrieval-Augmented Generation (RAG)** y **LangGraph**, enfocado en el desarrollo de un asistente inteligente para la consulta de procedimientos oficiales de extranjería en España.
