@@ -372,4 +372,4 @@ Los modelos de lenguaje alcanzan su máximo potencial cuando se combinan con sis
 
 # Autor
 
-Proyecto desarrollado como caso práctico de **Large Language Models (LLM)**, **Retrieval-Augmented Generation (RAG)** y **LangGraph**, enfocado en el desarrollo de un asistente inteligente para la consulta de procedimientos oficiales de extranjería en España.
+Proyecto desarrollado como caso práctico de **Large Language Models (LLM)**, **Retrieval-Augmented Generation (RAG)** y **LangGraph**, enfocado en el desarrollo de un asistente inteligente para la consulta de algunos procedimientos oficiales de extranjería en España.
